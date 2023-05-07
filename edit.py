@@ -1,4 +1,4 @@
-from imageGen import ImageGenerator
+from model.imageGen import ImageGenerator
 
 imageGen = ImageGenerator()
 
