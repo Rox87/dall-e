@@ -8,12 +8,10 @@ class ImageGenerator:
     def __init__(self) -> str:
         self.image_url : str
         openai.api_key = os.getenv("OPENAI_API_KEY")
-        self.APIKey = openai.api_key
         self.name = None
 
     def generateImage(self,Prompt,ImageCount,ImageSize):
         try:
-            #self.APIKey
             response = openai.Image.create(
             prompt = Prompt,
             n = ImageCount,
@@ -67,14 +65,4 @@ class ImageGenerator:
 
         print(self.image_url)
         return self.image_url
-
-    
-
-
-#imageGen.generateImage(
-#    Prompt="Giant lion",
-#    ImageCount=2,
-#    ImageSize = "1024x1024"
-#    )
-#imageGen.downloadImage(names=["leão2","leão3"])
 
