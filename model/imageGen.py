@@ -13,7 +13,7 @@ class ImageGenerator:
 
     def generateImage(self,Prompt,ImageCount,ImageSize):
         try:
-            self.APIKey
+            #self.APIKey
             response = openai.Image.create(
             prompt = Prompt,
             n = ImageCount,
